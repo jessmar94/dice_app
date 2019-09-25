@@ -11,16 +11,15 @@ describe Dice do
       expect(subject.roll).to be <= 6
     end
 
-    # it 'rolls 2 dice at the same time' do
-    #   subject.roll
-    #   expect(subject.rolls(2)).to be <= 12
-    # end
-    #
-    # it 'rolls 4 dice at the same time' do
-    #   dice = Dice.new
-    #   dice.number_dice(4)
-    #   expect(dice.roll).to be <= (6*4)
-    # end
+    it 'rolls 2 dice at the same time' do
+      subject.roll
+      expect(subject.number_rolls(2)).to be <= 12
+    end
+
+    it 'rolls 4 dice at the same time' do
+      subject.roll
+      expect(subject.number_rolls(4)).to be <= (6*4)
+    end
     #
     # it 'records each dice roll' do
     #   dice = Dice.new
